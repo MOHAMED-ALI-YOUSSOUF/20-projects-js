@@ -105,5 +105,9 @@ const radioInputs = document.querySelectorAll("input[type='radio']")
 radioInputs.forEach(radioInput => radioInput.addEventListener('input', resetColor))
 
 function resetColor (e){
-
+    
+ const index = e.target.getAttribute("name").slice(1)-1;
+ const parentQuestionBlock = questions[index];
+ parentQuestionBlock.removeAttribute("style","background-image:");
+      
 }
